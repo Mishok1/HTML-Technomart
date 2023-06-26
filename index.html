@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 <body>
     <h1 class="visually_hidden">Интернет магазин: Техномарт</h1>
     <header class="main_header">
-        <address class="header_address">
+        <adress class="header_address">
             <h2 class="visually_hidden">Адрес</h2>
             <div class="header_address_container width_limiting_container">
                 <p class="header_address_desc">Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -22,7 +22,60 @@
                     </li>
                 </ul>
             </div>
-        </address>
+        </adress>
+        <div class="header_logo_container">
+            <div class="width_limiting_container">
+                <img class="logo" src="images/index/technomart_logo.svg" width="220" height="50" alt="Логотип Техномарт.">
+                <form class="header_search_form" action="">
+                    <label class="search_form_label">
+                        <input class="search_form_input" type="text" placeholder="Поиск:">
+                    </label>
+                </form>
+                <button class="header_login_button" type="button">Войти</button>
+            </div>
+        </div>
+        <nav class="header_navigation">
+            <div class="width_limiting_container">
+                <ul class="navigation_list">
+                    <li class="navigation_item">
+                        <a class="navigation_link" href="#">Главная</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a class="navigation_link" href="#">Компания</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a class="navigation_link" href="#">Каталог</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a class="navigation_link" href="#">Новости</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a class="navigation_link" href="#">Спецпредложения</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a class="navigation_link" href="#">Доставка</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a class="navigation_link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="user_list">
+                    <li class="user_item">
+                        <button class="user_button user_button_bookmark" type="button">
+                            <span class="visually_hidden">Закладки</span>
+                        </button>
+                    </li>
+                    <li class="user_item">
+                        <button class="user_button user_button_cart" type="button">
+                            <span class="visually_hidden">Корзина</span>
+                        </button>
+                    </li>
+                    <li class="user_item">
+                        <button class="user_button user_button_checkout" type="button">Оформить заказ</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 </body>
 
