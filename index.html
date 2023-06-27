@@ -25,8 +25,9 @@
         </adress>
         <div class="header_logo_container">
             <div class="width_limiting_container">
-                <img class="logo" src="images/index/technomart_logo.svg" width="220" height="50" alt="Логотип Техномарт.">
-                <form class="header_search_form" action="">
+                <img class="logo" src="images/index/technomart_logo.svg" width="220" height="50"
+                    alt="Логотип Техномарт.">
+                <form class="header_search_form" action="https://echo.htmlacademy.ru/" method="post">
                     <label class="search_form_label">
                         <input class="search_form_input" type="text" placeholder="Поиск:">
                     </label>
@@ -77,6 +78,132 @@
             </div>
         </nav>
     </header>
+    <main class="main_container">
+        <section class="slider_section width_limiting_container">
+            <h2 class="visually_hidden">Слайдер</h2>
+            <ul class="catalog_list">
+                <li class="catalog_item paints">
+                    <h3 class="catalog_title">Материалы</h3>
+                    <a class="catalog_link" href="#">на любой вкус</a>
+                    <img class="catalog_image" src="images/icons/catalog/paints.svg" width="90" height="90"
+                        alt="Краски.">
+                </li>
+                <li class="catalog_item tool">
+                    <h3 class="catalog_title">инструмент</h3>
+                    <a class="catalog_link" href="#">на все случаи</a>
+                    <img class="catalog_image" src="images/icons/catalog/tool.svg" width="90" height="90" alt="Краски.">
+                </li>
+                <li class="catalog_item equipment">
+                    <h3 class="catalog_title">техника</h3>
+                    <a class="catalog_link" href="#">для стройки</a>
+                    <img class="catalog_image" src="images/icons/catalog/equipment.svg" width="90" height="90"
+                        alt="Краски.">
+                </li>
+                <li class="catalog_item sale">
+                    <h3 class="catalog_title">скидки 50%</h3>
+                    <a class="catalog_link" href="#">на 350 товаров</a>
+                    <img class="catalog_image" src="images/icons/catalog/sale.svg" width="90" height="90" alt="Краски.">
+                </li>
+                <li class="catalog_item delivery">
+                    <h3 class="catalog_title">доставка</h3>
+                    <a class="catalog_link" href="#">бесплатно</a>
+                    <img class="catalog_image" src="images/icons/catalog/delivery.svg" width="90" height="90"
+                        alt="Краски.">
+                </li>
+                <li class="catalog_slider_item">
+                    <ul class="slider_list">
+                        <li class="slide_item">
+                            <h3 class="slide_title">Дрели</h3>
+                            <p class="slide_text">Соседям на радость!</p>
+                            <a class="slide_link" href="#">Открыть каталог</a>
+                        </li>
+                        <li class="slide_item">
+                            <h3 class="slide_title">Перфораторы </h3>
+                            <p class="slide_text">Соседям на радость!</p>
+                            <a class="slide_link" href="#">Открыть каталог</a>
+                        </li>
+                </li>
+            </ul>
+            </ul>
+            <ul class="slider_pagination">
+                <li class="slider_pagination_item">
+                    <button class="slider_pagination_button slider_pagination_button_current" type="button">
+                        <span class="visually_hidden">Первый слайд</span>
+                    </button>
+                </li>
+                <li class="slider_pagination_item">
+                    <button class="slider_pagination_button" type="button">
+                        <span class="visually_hidden">Второй слайд</span>
+                    </button>
+                </li>
+                <li class="slider_pagination_item">
+                    <button class="slider_pagination_button" type="button">
+                        <span class="visually_hidden">Третий слайд</span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="slider_control">
+                <li class="slider_control_item">
+                    <button class="slider_control_button button_left" type="button">
+                        <span class="visually_hidden">Предыдущий слайд</span>
+                    </button>
+                </li>
+                <li class="slider_control_item">
+                    <button class="slider_control_button button_left" type="button">
+                        <span class="visually_hidden">Следующий слайд</span>
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="main_footer">
+        <section class="footer_background_container">
+            <h2 class="visually_hidden">Контакты</h2>
+            <div class="width_limiting_container">
+                <img class="logo" src="images/index/technomart_logo.svg" width="220" height="50"
+                    alt="Логотип Техномарт.">
+                <address class="footer_address">
+                    <p class="feedback_text">Обратная связь:<br>
+                        <a class="feedback_link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                    </p>
+                    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> +7 (812) 555-05-55</p>
+                </address>
+                <ul class="socials_list">
+                    <li class="social_item">
+                        <a class="social_link" href="https://www.pinterest.com/">
+                            <span class="visually_hidden">Pinterest</span>
+                        </a>
+                    </li>
+                    <li class="social_item">
+                        <a class="social_link" href="https://vk.com/">
+                            <span class="visually_hidden">Вконтакте</span>
+                        </a>
+                    </li>
+                    <li class="social_item">
+                        <a class="social_link" href="https://www.vsco.co/">
+                            <span class="visually_hidden">Vsco</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="footer_form" action="https://echo.htmlacademy.ru/" method="post">
+                    <label class="footer_form_label">Получайте лучшие предложения
+                        <input class="footer_form_input" type="text" placeholder="email@example.com">
+                    </label>
+                    <button class="footer_form_button" type="submit">
+                        <span class="visually_hidden">Отправить</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="footer_background_container">
+            <h2 class="visually_hidden">Авторское право</h2>
+            <div class="width_limiting_container">
+                <p class="footer_copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
+                <p class="footer_authorship">Разработано — <a class="authorship_link"
+                        href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>

@@ -14,6 +14,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/firasans-700.woff2) format("woff2");
+    font-display: swap;
+}
+
 .visually_hidden {
     position: absolute;
     width: 1px;
@@ -48,6 +56,9 @@ body {
 }
 
 /* header */
+.main_header {
+    margin-bottom: 50px;
+}
 
 .header_address {
     height: 44px;
@@ -131,7 +142,7 @@ body {
     color: #FFFFFF;
 }
 
-::placeholder {
+.search_form_input::placeholder {
     color: #FFFFFF;
 }
 
@@ -237,4 +248,298 @@ body {
     color: #FFFFFF;
     background-color: #63A63E;
     border-radius: 4px;
+}
+
+/* main */
+
+/* slider_section */
+
+.slider_section {
+    color: #FFFFFF;
+    position: relative;
+}
+
+.catalog_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.catalog_item {
+    width: 370px;
+    min-height: 180px;
+    padding: 20px 37px 20px 25px;
+    background-color: #FFBF47;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.catalog_slider_item {
+    grid-column: 1/3;
+    grid-row: 2/4;
+}
+
+.catalog_item.tool {
+    background-color: #3BBCE3;
+}
+
+.catalog_item.equipment {
+    background-color: #DC91D8;
+}
+
+.catalog_item.sale {
+    background-color: #8ED78F;
+}
+
+.catalog_title {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: flex-start;
+}
+
+.catalog_link {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    padding: 5px 10px 5px 0;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-end;
+}
+
+.catalog_link::before {
+    content: "";
+    background: url(../images/icons/arrow_right.svg) no-repeat center;
+    width: 16px;
+    height: 16px;
+    margin: 6px;
+}
+
+.catalog_image {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.slider_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slide_item {
+    width: 770px;
+    height: 390px;
+    background-color: #3D546F;
+    padding: 50px 50px 40px 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slide_item:nth-child(1) {
+    background: url("../images/index/slider/slide_1.jpg") no-repeat center;
+}
+
+.slide_item:nth-child(2) {
+    display: none;
+    background: url("../images/index/slider/slide_2.jpg") no-repeat center;
+}
+
+.slide_title {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 10px;
+}
+
+.slide_text {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.slide_link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    background-color: #EE3643;
+    color: #FFFFFF;
+    padding: 13px 25px;
+    border-radius: 4px;
+    border: 1px solid red;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.slider_pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* align-items: center; */
+    gap: 8px;
+    position: absolute;
+    bottom: 115px;
+    left: 365px;
+}
+
+.slider_control {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slider_pagination_button {
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FFD180;
+}
+
+.slider_pagination_button_current {
+    background-color: #FFFFFF;
+}
+
+.slider_control_button {
+    border: none;
+    background: rgba(41, 52, 73, 0.6) url("../images/icons/arrow_right.svg") no-repeat center;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    /* opacity: 60%; */
+    width: 50px;
+    height: 50px;
+}
+
+/* footer */
+
+.footer_background_container {
+    background-color: #32425C;
+}
+
+.footer_address {
+    font-style: normal;
+    color: #F3F7F9;
+}
+
+.feedback_text {
+    color: #FFFFFF;
+}
+
+.feedback_link {
+    color: #FFD180;
+    text-decoration: none;
+}
+
+.socials_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.social_link {
+    text-decoration: none;
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+
+.social_item:nth-child(1) .social_link {
+    background: url("../images/icons/socials/pinterest.svg") no-repeat center;
+}
+
+.social_item:nth-child(2) .social_link {
+    background: url("../images/icons/socials/vk.svg") no-repeat center;
+}
+
+.social_item:nth-child(3) .social_link {
+    background: url("../images/icons/socials/vsco.svg") no-repeat center;
+}
+
+.footer_form {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* width: 500px; */
+}
+
+.footer_form_label {
+    color: #FFFFFF;
+}
+
+.footer_form_input {
+    width: 260px;
+    height: 40px;
+    padding: 10px 16px 12px;
+    color: #BDBDBD;
+    border: 1px solid #63A63E;
+    border-radius: 2px;
+}
+
+.footer_form_input::placeholder {
+    color: #BDBDBD;
+}
+
+.footer_form_button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: #63A63E url("../images/icons/white_cart.svg") no-repeat center;
+    color: #FFFFFF;
+    border-radius: 2px;
+    margin-left: -1px;
+}
+
+.footer_background_container:last-child {
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #293449;
+    color: #FFFFFF;
+    padding: 21px;
+}
+
+.footer_copyright,
+.footer_authorship {
+    margin: 0;
+}
+
+.footer_copyright {
+    margin-right: auto;
+}
+
+.authorship_link {
+    text-decoration: none;
+    color: #FFD180;
+}
+
+.footer_background_container:last-child .width_limiting_container {
+    display: flex;
 }
