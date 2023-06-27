@@ -257,6 +257,7 @@ body {
 .slider_section {
     color: #FFFFFF;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .catalog_list {
@@ -402,18 +403,14 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
     position: absolute;
-    bottom: 115px;
+    bottom: 65px;
     left: 365px;
 }
 
-.slider_control {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
 .slider_pagination_button {
     padding: 0;
@@ -428,6 +425,16 @@ body {
     background-color: #FFFFFF;
 }
 
+.slider_control {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    bottom: 160px;
+    transform: translateY("-50%");
+}
+
 .slider_control_button {
     border: none;
     background: rgba(41, 52, 73, 0.6) url("../images/icons/arrow_right.svg") no-repeat center;
@@ -436,6 +443,87 @@ body {
     /* opacity: 60%; */
     width: 50px;
     height: 50px;
+}
+
+.slider_button_left {
+    transform: rotate(180deg);
+}
+
+/* services section */
+
+.services_section {
+    padding: 52px 0;
+    background-color: #F4F7F9;
+}
+
+.services_title {
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.services_text {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.services_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.services_item {
+    padding: 24px 31px;
+    width: 370px;
+    min-height: 382px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0px 8px 20px 0px #00000026;
+}
+
+.services_item::before {
+    content: "";
+    background: url("../images/icons/services/delivery_red.svg") no-repeat;
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin-bottom: 46px;
+}
+
+.services_item:nth-child(2)::before {
+    content: "";
+    background: url("../images/icons/services/sale_red.svg") no-repeat;
+}
+
+.services_item:nth-child(3)::before {
+    content: "";
+    background: url("../images/icons/services/paints_red.svg") no-repeat;
+}
+
+.services_subtitle {
+    margin: 0;
+    /* margin-top: 160px; */
+    margin-bottom: 21px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #32425C;
+    text-transform: uppercase;
+}
+
+.services_desc {
+    margin: 0;
+    color: #000000;
 }
 
 /* footer */
