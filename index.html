@@ -33,6 +33,23 @@
                     </label>
                 </form>
                 <button class="header_login_button" type="button">Войти</button>
+                <section class="popover_login_section">
+                    <h2 class="popover_login_title">личный кабинет</h2>
+                    <button class="popover_login_close_button" type="button">
+                        <span class="visually_hidden">Закрыть</span>
+                    </button>
+                    <form class="popover_login_form" action="https://echo.htmlacademy.ru/">
+                        <input class="popover_login_input" type="text" placeholder="Логин">
+                        <input class="popover_login_input" type="password" placeholder="Пароль">
+                        <label class="popover_login_label">
+                            <input class="popover_login_checkbox_input" type="checkbox" checked>
+                            Запомнить меня
+                        </label>
+                        <a class="popover_login_password_link" href="#">Забыл пароль</a>
+                        <button class="popover_login_submit_button" type="submit">войти</button>
+                        <a class="popover_login_register_link" href="#">регистрация</a>
+                    </form>
+                </section>
             </div>
         </div>
         <nav class="header_navigation">
@@ -122,8 +139,8 @@
                             <p class="slide_text">Соседям на радость!</p>
                             <a class="slide_link" href="#">Открыть каталог</a>
                         </li>
+                    </ul>
                 </li>
-            </ul>
             </ul>
             <ul class="slider_pagination">
                 <li class="slider_pagination_item">
@@ -155,6 +172,101 @@
                 </li>
             </ul>
         </section>
+        <section class="products_secton width_limiting_container">
+            <h2 class="products_title">ПЕРФОРАТОРЫ</h2>
+            <form class="products_filter" action="https://echo.htmlacademy.ru/" method="get">
+                <fieldset class="products_filter_group">
+                    <legend class="products_filter_title">ЦЕНА</legend>
+                    <div class="range">
+                        <div class="range_scale">
+                            <div class="range_bar" style="left: 42px; width: 136px;">
+                                <button class="range_toggle toggle_min">
+                                    <span class="visually_hidden">Изменить минимальную цену.</span>
+                                </button>
+                                <button class="range_toggle toggle_max">
+                                    <span class="visually_hidden">Изменить максимальную цену.</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="range_wrapper_inputs">
+                            <label class="catalog_filter_label">
+                                от
+                                <input class="range_input" type="number" value="0" name="min_price">
+                                ₽
+                            </label>
+                            <label class="catalog_filter_label">
+                                от
+                                <input class="range_input" type="number" value="30000" name="max_price"
+                                    style="width: 37px;">
+                                ₽
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="products_filter_group">
+                    <legend class="products_filter_title">ПРОИЗВОДИТЕЛИ</legend>
+                    <label class="control">
+                        <input class="control_input" type="checkbox" name="Bosch" id="?" checked>
+                        Bosch
+                    </label>
+                    <label class="control">
+                        <input class="control_input" type="checkbox" name="Интерскол" id="?">
+                        Интерскол
+                    </label>
+                    <label class="control">
+                        <input class="control_input" type="checkbox" name="MAKIta" id="?" checked>
+                        MAKIta
+                    </label>
+                    <label class="control">
+                        <input class="control_input" type="checkbox" name="Dewalt" id="?">
+                        Dewalt
+                    </label>
+                    <label class="control">
+                        <input class="control_input" type="checkbox" name="Hitachi" id="?">
+                        Hitachi
+                    </label>
+                </fieldset>
+                <fieldset class="products_filter_group">
+                    <legend class="products_filter_title">ПИТАНИЕ</legend>
+                    <ul class="products_filter_list">
+                        <li class="products_filter_item">
+                            <label class="control">
+                                <input class="control_input" type="radio" name="power" value="rechargeable" checked>
+                                Аккумуляторные
+                            </label>
+                        </li>
+                        <li class="products_filter_item">
+                            <label class="control">
+                                <input class="control_input" type="radio" name="power" value="network">
+                                Сетевые
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button class="products_button" type="submit">Показать</button>
+            </form>
+            <select name="select_control" aria-label="Сортировка">
+                <option value="popular">Сначала популярное</option>
+                <option value="cheap">Сначала дешёвое</option>
+                <option value="expensive">Сначала дорогое</option>
+            </select>
+
+            <ul class="products_list">
+                <li class="product_card new">
+                    <h3 class="product_title">Перфоратор BOSCH BFG 3000</h3>
+                    <img class="product_image" src="images/index/bosch_bfg_3000.jpg" alt="Bosch_bfg_3000.">
+                    <p class="product_old_price">22500 ₽</p>
+                    <p class="product_new_price">
+                        15500 ₽
+                        <svg xmlns="http://www.w3.org/2000/svg" width="138" height="40" fill="none"
+                            viewBox="0 0 138 40">
+                            <path fill="#EE3643"
+                                d="M121.089 1.238A4.002 4.002 0 0 0 118.195 0H2.957C1.331 0 0 1.421 0 3.158v33.684C0 38.58 1.33 40 2.957 40h115.238a4.002 4.002 0 0 0 2.894-1.238l15.274-16a4 4 0 0 0 0-5.524l-15.274-16Z" />
+                        </svg>
+                    </p>
+                </li>
+            </ul>
+        </section>
         <section class="services_section">
             <div class="width_limiting_container">
                 <h2 class="services_title">Сервисы</h2>
@@ -181,44 +293,64 @@
                 </ul>
             </div>
         </section>
+        <div class="sections_container width_limiting_container">
+            <section class="about_section">
+                <h2 class="about_title">КОМПАНИЯ «Техномарт»</h2>
+                <p class="about_text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+                    строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+                <p class="about_text">Мы можем доставить ваш товар в самые отдаленные точки России!
+                    Техномарт работает со многими транспортными компаниями:</p>
+                <a class="about_link" href="#">о компании</a>
+            </section>
+            <section class="contacts_section">
+                <h2 class="contacts_title">КОНТАКТЫ</h2>
+                <p class="contacts_text">Вы можете забрать товар сами, заехав в наш офис:</p>
+                <img class="contacts_image" src="images/index/map.jpg" width="500" height="347"
+                    alt="Большая Конюшенная улица, 19/8.">
+            </section>
+        </div>
     </main>
     <footer class="main_footer">
         <section class="footer_background_container">
             <h2 class="visually_hidden">Контакты</h2>
             <div class="width_limiting_container">
-                <img class="logo" src="images/index/technomart_logo.svg" width="220" height="50"
-                    alt="Логотип Техномарт.">
-                <address class="footer_address">
+                <div class="footer_wrapper">
+                    <img class="footer_logo" src="images/index/technomart_logo.svg" width="220" height="50"
+                        alt="Логотип Техномарт.">
+                    <address class="footer_address">
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> <a class="footer_address_link"
+                            href="+78125550555">+7 (812) 555-05-55</a>
+                    </address>
+                    <ul class="socials_list">
+                        <li class="social_item">
+                            <a class="social_link" href="https://www.pinterest.com/">
+                                <span class="visually_hidden">Pinterest</span>
+                            </a>
+                        </li>
+                        <li class="social_item">
+                            <a class="social_link" href="https://vk.com/">
+                                <span class="visually_hidden">Вконтакте</span>
+                            </a>
+                        </li>
+                        <li class="social_item">
+                            <a class="social_link" href="https://www.vsco.co/">
+                                <span class="visually_hidden">Vsco</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_wrapper">
                     <p class="feedback_text">Обратная связь:<br>
                         <a class="feedback_link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                     </p>
-                    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> +7 (812) 555-05-55</p>
-                </address>
-                <ul class="socials_list">
-                    <li class="social_item">
-                        <a class="social_link" href="https://www.pinterest.com/">
-                            <span class="visually_hidden">Pinterest</span>
-                        </a>
-                    </li>
-                    <li class="social_item">
-                        <a class="social_link" href="https://vk.com/">
-                            <span class="visually_hidden">Вконтакте</span>
-                        </a>
-                    </li>
-                    <li class="social_item">
-                        <a class="social_link" href="https://www.vsco.co/">
-                            <span class="visually_hidden">Vsco</span>
-                        </a>
-                    </li>
-                </ul>
-                <form class="footer_form" action="https://echo.htmlacademy.ru/" method="post">
-                    <label class="footer_form_label">Получайте лучшие предложения
-                        <input class="footer_form_input" type="text" placeholder="email@example.com">
-                    </label>
-                    <button class="footer_form_button" type="submit">
-                        <span class="visually_hidden">Отправить</span>
-                    </button>
-                </form>
+                    <form class="footer_form" action="https://echo.htmlacademy.ru/" method="post">
+                        <label class="footer_form_label" for="subscribe">Получайте лучшие предложения</label>
+                        <input class="footer_form_input" type="text" id="subscribe" placeholder="email@example.com">
+                        <button class="footer_form_button" type="submit">
+                            <span class="visually_hidden">Отправить</span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
         <section class="footer_background_container">
