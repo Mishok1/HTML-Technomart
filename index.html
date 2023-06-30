@@ -11,7 +11,7 @@
 <body>
     <h1 class="visually_hidden">Интернет магазин: Техномарт</h1>
     <header class="main_header">
-        <adress class="header_address">
+        <address class="header_address">
             <h2 class="visually_hidden">Адрес</h2>
             <div class="header_address_container width_limiting_container">
                 <p class="header_address_desc">Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -22,7 +22,7 @@
                     </li>
                 </ul>
             </div>
-        </adress>
+        </address>
         <div class="header_logo_container">
             <div class="width_limiting_container">
                 <a class="header_logo_link" href="index.html">
@@ -31,27 +31,52 @@
                 </a>
                 <form class="header_search_form" action="https://echo.htmlacademy.ru/" method="post">
                     <label class="search_form_label">
-                        <input class="search_form_input" type="text" placeholder="Поиск:">
+                        <input class="search_form_input" type="text" name="search" placeholder="Поиск:">
                     </label>
                 </form>
-                <button class="header_login_button" type="button">Войти</button>
-                <section class="popover_login_section">
-                    <h2 class="popover_login_title">личный кабинет</h2>
-                    <button class="popover_login_close_button" type="button">
-                        <span class="visually_hidden">Закрыть</span>
-                    </button>
-                    <form class="popover_login_form" action="https://echo.htmlacademy.ru/">
-                        <input class="popover_login_input" type="text" placeholder="Логин">
-                        <input class="popover_login_input" type="password" placeholder="Пароль">
-                        <label class="popover_login_label">
-                            <input class="popover_login_checkbox_input" type="checkbox" checked>
-                            Запомнить меня
-                        </label>
-                        <a class="popover_login_password_link" href="#">Забыл пароль</a>
-                        <button class="popover_login_submit_button" type="submit">войти</button>
-                        <a class="popover_login_register_link" href="#">регистрация</a>
-                    </form>
-                </section>
+                <div class="popover_cart_wrapper">
+                    <button class="header_login_button" type="button">Войти</button>
+                    <section class="popover_login_section">
+                        <h2 class="popover_login_title">личный кабинет</h2>
+                        <button class="popover_login_close_button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                viewBox="0 0 20 20">
+                                <path fill="#C4C4C4" fill-rule="evenodd"
+                                    d="M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10Zm0-1.818a8.182 8.182 0 1 0 0-16.364 8.182 8.182 0 0 0 0 16.364Zm-2.994-3.903L10 11.286l2.993 2.993 1.286-1.286L11.286 10l2.993-2.994-1.286-1.285L10 8.714 7.006 5.721 5.721 7.006 8.714 10l-2.993 2.993 1.285 1.286Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="visually_hidden">Закрыть</span>
+                        </button>
+                        <form class="popover_login_form" action="https://echo.htmlacademy.ru/" method="post">
+                            <input class="popover_login_input" name="login" type="text" placeholder="Логин">
+                            <input class="popover_login_input" name="password" type="password" placeholder="Пароль">
+                            <label class="popover_login_control_label">
+                                <input class="popover_login_checkbox_input" type="checkbox" name="remember" value="true"
+                                    checked>
+                                <span class="popover_login_checkbox_mark"></span>
+                                <span class="popover_login_checkbox_label">Запомнить меня</span>
+                            </label>
+                            <a class="popover_login_password_link" href="#">Забыл пароль</a>
+                            <button class="popover_login_submit_button" type="submit">войти</button>
+                            <a class="popover_login_register_link" href="#">регистрация</a>
+                        </form>
+                    </section>
+                    <section class="popover_account_section">
+                        <h2 class="popover_account_title">Здравствуйте,<br> Равшан Джамшутович</h2>
+                        <a class="popover_account_link" href="#">мои заказы</a>
+                        <a class="popover_account_link" href="#">личный кабинет</a>
+                        <button class="popover_account_logout">выйти</button>
+                        <button class="popover_login_close_button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                viewBox="0 0 20 20">
+                                <path fill="#C4C4C4" fill-rule="evenodd"
+                                    d="M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10Zm0-1.818a8.182 8.182 0 1 0 0-16.364 8.182 8.182 0 0 0 0 16.364Zm-2.994-3.903L10 11.286l2.993 2.993 1.286-1.286L11.286 10l2.993-2.994-1.286-1.285L10 8.714 7.006 5.721 5.721 7.006 8.714 10l-2.993 2.993 1.285 1.286Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="visually_hidden">Закрыть</span>
+                        </button>
+                    </section>
+                </div>
             </div>
         </div>
         <nav class="header_navigation">
@@ -176,31 +201,28 @@
         </section>
         <section class="products_secton width_limiting_container">
             <h2 class="products_title">ПЕРФОРАТОРЫ</h2>
-            <form class="products_filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="products_filter" action="https://echo.htmlacademy.ru/" method="post">
                 <fieldset class="products_filter_group">
                     <legend class="products_filter_title">ЦЕНА</legend>
                     <div class="range">
-                        <div class="range_scale">
-                            <div class="range_bar" style="left: 42px; width: 136px;">
-                                <button class="range_toggle toggle_min">
-                                    <span class="visually_hidden">Изменить минимальную цену.</span>
-                                </button>
-                                <button class="range_toggle toggle_max">
-                                    <span class="visually_hidden">Изменить максимальную цену.</span>
-                                </button>
+                        <div class="range_background_wrapper">
+                            <div class="range_scale">
+                                <div class="range_bar" style="left: 0; width: 64px;">
+                                    <button class="range_toggle toggle_min">
+                                        <span class="visually_hidden">Изменить минимальную цену.</span>
+                                    </button>
+                                    <button class="range_toggle toggle_max">
+                                        <span class="visually_hidden">Изменить максимальную цену.</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="range_wrapper_inputs">
                             <label class="catalog_filter_label">
-                                от
-                                <input class="range_input" type="number" value="0" name="min_price">
-                                ₽
+                                <input class="range_input" type="text" name="min_price" value="0">
                             </label>
                             <label class="catalog_filter_label">
-                                от
-                                <input class="range_input" type="number" value="30000" name="max_price"
-                                    style="width: 37px;">
-                                ₽
+                                <input class="range_input" type="text" name="max_price" value="30000">
                             </label>
                         </div>
                     </div>
@@ -208,39 +230,47 @@
                 <fieldset class="products_filter_group">
                     <legend class="products_filter_title">ПРОИЗВОДИТЕЛИ</legend>
                     <label class="control">
-                        <input class="control_input" type="checkbox" name="Bosch" id="?" checked>
-                        Bosch
+                        <input class="control_input" type="checkbox" name="manufacturer" value="bocsh" checked>
+                        <span class="control_mark"></span>
+                        <span class="control_label">Bosch</span>
                     </label>
                     <label class="control">
-                        <input class="control_input" type="checkbox" name="Интерскол" id="?">
-                        Интерскол
+                        <input class="control_input" type="checkbox" name="manufacturer" value="интерскол">
+                        <span class="control_mark"></span>
+                        <span class="control_label">Интерскол</span>
                     </label>
                     <label class="control">
-                        <input class="control_input" type="checkbox" name="MAKIta" id="?" checked>
-                        MAKIta
+                        <input class="control_input" type="checkbox" name="manufacturer" value="makita" checked>
+                        <span class="control_mark"></span>
+                        <span class="control_label">MAKIta</span>
                     </label>
                     <label class="control">
-                        <input class="control_input" type="checkbox" name="Dewalt" id="?">
-                        Dewalt
+                        <input class="control_input" type="checkbox" name="manufacturer" value="dewalt">
+                        <span class="control_mark"></span>
+                        <span class="control_label">Dewalt</span>
                     </label>
                     <label class="control">
-                        <input class="control_input" type="checkbox" name="Hitachi" id="?">
-                        Hitachi
+                        <input class="control_input" type="checkbox" name="manufacturer" value="hitachi">
+                        <span class="control_mark"></span>
+                        <span class="control_label">Hitachi</span>
                     </label>
                 </fieldset>
                 <fieldset class="products_filter_group">
                     <legend class="products_filter_title">ПИТАНИЕ</legend>
                     <ul class="products_filter_list">
                         <li class="products_filter_item">
-                            <label class="control">
-                                <input class="control_input" type="radio" name="power" value="rechargeable" checked>
-                                Аккумуляторные
+                            <label class="control_radio">
+                                <input class="control_radio_input" type="radio" name="power" value="rechargeable"
+                                    checked>
+                                <span class="control_radio_mark"></span>
+                                <span class="control_radio_label">Аккумуляторные</span>
                             </label>
                         </li>
                         <li class="products_filter_item">
-                            <label class="control">
-                                <input class="control_input" type="radio" name="power" value="network">
-                                Сетевые
+                            <label class="control_radio">
+                                <input class="control_radio_input" type="radio" name="power" value="network">
+                                <span class="control_radio_mark"></span>
+                                <span class="control_radio_label">Сетевые</span>
                             </label>
                         </li>
                     </ul>
@@ -519,8 +549,10 @@
             <section class="contacts_section">
                 <h2 class="contacts_title">КОНТАКТЫ</h2>
                 <p class="contacts_text">Вы можете забрать товар сами, заехав в наш офис:</p>
-                <img class="contacts_image" src="images/index/map.jpg" width="500" height="347"
-                    alt="Большая Конюшенная улица, 19/8.">
+                <a class="contacts_link" href="#">
+                    <img class="contacts_image" src="images/index/map.jpg" width="500" height="347"
+                        alt="Большая Конюшенная улица, 19/8.">
+                </a>
             </section>
         </div>
     </main>
@@ -539,17 +571,17 @@
                     </address>
                     <ul class="socials_list">
                         <li class="social_item">
-                            <a class="social_link social_link_pin" href="https://www.pinterest.com/">
+                            <a class="social_link social_link_pin" href="https://www.pinterest.com/" target="_blank">
                                 <span class="visually_hidden">Pinterest</span>
                             </a>
                         </li>
                         <li class="social_item">
-                            <a class="social_link social_link_vk" href="https://vk.com/">
+                            <a class="social_link social_link_vk" href="https://vk.com/" target="_blank">
                                 <span class="visually_hidden">Вконтакте</span>
                             </a>
                         </li>
                         <li class="social_item">
-                            <a class="social_link social_link_vsco" href="https://www.vsco.co/">
+                            <a class="social_link social_link_vsco" href="https://www.vsco.co/" target="_blank">
                                 <span class="visually_hidden">Vsco</span>
                             </a>
                         </li>
@@ -561,7 +593,8 @@
                     </p>
                     <form class="footer_form" action="https://echo.htmlacademy.ru/" method="post">
                         <label class="footer_form_label" for="subscribe">Получайте лучшие предложения</label>
-                        <input class="footer_form_input" type="text" id="subscribe" placeholder="email@example.com">
+                        <input class="footer_form_input" type="text" id="subscribe" name="email"
+                            placeholder="email@example.com">
                         <button class="footer_form_button" type="submit">
                             <span class="visually_hidden">Отправить</span>
                         </button>
